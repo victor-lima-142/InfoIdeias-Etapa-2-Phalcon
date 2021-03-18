@@ -1,0 +1,476 @@
+/*
+Sistema de Chamados theme
+from http://infoideias.com.br
+
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+
+license: MIT
+author: infoideias.com.br
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+  background-color:#e0e0e0;
+  -webkit-font-smoothing: antialiased;
+  /*font: normal 14px Roboto,arial,sans-serif;*/
+  font: normal 14px Arial,sans-serif;
+}
+.navbar-default {background-color:#FFF;/* margin-top:50px; */border-width:0;z-index:5;}
+.navbar-default .navbar-nav{ margin-top: 10px; font-weight: 600;}
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {color:#31577D; background-color:transparent;}
+.navbar-default .dropdown-menu { /*background-color:#ffffff;*/}
+.navbar-default .dropdown-menu li > a {padding-left:30px;}
+.header {background-color:#ffffff;border-width:0;}
+.header .navbar-collapse {background-color:#ffffff;}
+.btn,.form-control,.panel,.list-group,.well {border-radius:1px;box-shadow:0 0 0;}
+.form-control {border-color:#d7d7d7;}
+.btn-primary {border-color:transparent;}
+.btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {background-color:#4285f4;}
+.btn-plus {background-color:#ffffff;border-width:1px;border-color:#dddddd;box-shadow:1px 1px 0 #999999;border-radius:3px;color:#666666;text-shadow:0 0 1px #bbbbbb;}
+.well,.panel {border-color:#d2d2d2;box-shadow:0 1px 0 #cfcfcf;border-radius:3px;}
+.btn-success,.label-success,.progress-bar-success{background-color:#65b045;}
+.btn-info,.label-info,.progress-bar-info{background-color:#a0c3ff;border-color:#a0c3ff;}
+.btn-danger,.label-danger,.progress-bar-danger{background-color:#dd4b39;}
+.btn-warning,.label-warning,.progress-bar-warning{background-color:#f4b400;color:#444444;}
+
+hr {border-color:#ececec;}
+button {
+ outline: 0;
+}
+textarea {
+ resize: none;
+ outline: 0; 
+}
+.panel .btn i,.btn span:not(.hidden-xs){
+ color:#666666;
+}
+
+.btn.btn-file > i.glyphicon-folder-open{
+    color:#FFFFFF;
+    padding-right:5px;
+}
+
+.panel .panel-heading {
+	color: #eaeaeb;
+    background-color: #777;
+    border-color: #ddd;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: 20px;
+
+ /*background-color:#ffffff;
+ font-weight:700;
+ font-size:16px;
+ color:#262626;
+ border-color:#ffffff;*/
+}
+.panel .panel-heading a {
+ font-weight:400;
+ font-size:11px;
+}
+.panel .panel-default {
+ border-color:#cccccc;
+}
+.panel .panel-thumbnail {
+ padding:0;
+}
+.panel .img-circle {
+ width:50px;
+ height:50px;
+}
+.list-group-item:first-child,.list-group-item:last-child {
+ border-radius:0;
+}
+h3,h4,h5 { 
+ border:0 solid #efefef; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+}
+.modal-dialog {
+ width: 450px;
+}
+.modal-footer {
+ border-width:0;
+}
+.dropdown-menu {
+ background-color:#f4f4f4;
+ border-color:#f0f0f0;
+ border-radius:0;
+ margin-top:-1px;
+}
+/* end theme */
+
+/* template layout*/
+#subnav {
+ position:fixed;
+ width:100%;
+}
+
+/* 
+==========================================
+Alterações por Fabio Oliveira 
+==========================================
+*/
+
+/*
+------------
+(11/02/2015)
+------------
+*/
+
+/*
+@media (max-width: 768px) {
+ #subnav {
+  padding-top: 6px;
+ }
+} 
+*/
+
+#navbar-collapse2 {
+	width:100%;
+}
+
+.panel-collapsed h3.panel-title {
+	border-width: 0;
+	padding: 0;
+}
+
+#sidebar strong {
+	display: block;
+}
+
+#sidebar div.btn-success {
+	display: inline;
+}
+
+#sidebar li.list-group-item:last-child {
+    text-align: center;
+}
+
+#sidebar li.list-group-item:last-child button {
+    display: inline;
+    margin: 5px;
+}
+
+#sidebar li.list-group-item:last-child button:last-child {
+    vertical-align: top;
+}
+
+#remetente {
+	float: left;
+	width: 100%;
+}
+
+#remetente > [class*="col-"] strong, #remetente > [class*="col-"] input {
+	width: 100% !important;
+}
+
+table#lista-chamado td.text-center {
+	vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border: 0;
+	}
+
+
+}
+
+/*
+------------
+(12/02/2015)
+------------
+*/
+
+.navbar-header {
+	text-align: right;
+}
+
+.navbar-toggle {
+    padding: 10px 30px;
+    background-image: none;
+    border: 0;
+    top: 0px;
+    margin: 0 -30px 0 0;
+    height: 80px;
+    background-color: #efefef;
+    border-radius: 0px;
+    position: relative;
+    float: none;
+}
+
+.navbar-form[role="search"] {
+	border: 0;
+	box-shadow: none;
+}
+
+.panel-collapsed h3.panel-title::before {
+	content: "";
+	height: 0;
+	width: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	display: inline-block;
+	position: relative;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.panel-collapsed h3.panel-title::before {
+	border-top: 5px solid #fff;
+}
+
+#sidebar .list-group-item:nth-child(odd) {
+	background: #f5f5f5;
+}
+
+/*Fim das alterações*/
+
+#main {
+ padding-top:120px;
+}
+
+#sidebar .list-group-item.active {
+	background: #F5B033;
+	border-color: #F5B033;
+	color: #333;
+}
+
+.list-group-item.active > .badge {
+	color: #333;
+}
+
+a#button-abrir-ticket span {
+	color: #fff;
+	margin-right: 5px;
+}
+
+button.btn-situacao.aguardando-resposta,
+button.btn-situacao.aguardando_aprovacao,
+button.btn-situacao.aguardando-resposta-cliente,
+button.btn-situacao.aguardando_aprovacao-cliente {
+	font-size: 12px;
+}
+
+/* 
+	*************** Alterações ***************
+	Autor: Rodrigo Costa
+	Data: 20/12/2015
+	__________________________________________
+*/
+
+/** LOGIN **/
+
+    .login-body { background-color: #f1f2f7;}
+    /*.login-img-body{
+      background: url('../img/bg-1.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .login-img2-body{
+      background: url('../img/bg-1.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }*/
+    .login-img3-body{
+     /* background: url('http://sistema.midasweb.imb.br/midasweb/_lib/img/sys__NM__bg-login.jpg') no-repeat center center fixed;*/
+        background: url('../img/bg-helpdesk.jpg') no-repeat center center fixed;
+        background-color: #00000F;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    /*.login-img-body .login-form{ max-width: 350px; margin: 200px auto 0; background: rgba(213,215,222,0.4); border: 1px solid #B0B6BE; }
+    .login-img2-body .login-form{ border: 1px solid #B0B6BE; background: rgba(213,215,222,0.7); }*/
+    .login-img3-body .login-form{
+        /*border: 1px solid #B0B6BE;
+        background: rgba(213,215,222,0.9);*/
+
+        background:rgba(255, 255, 255, 0.25);
+        overflow:hidden;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.25);/*url(../imagens/panel_bg.gif) repeat-x top*/
+        -moz-box-shadow: 0px 3px 15px #111;
+        -webkit-box-shadow: 0px 3px 5px #111;
+        box-shadow: 0px 3px 5px #111;
+    }
+
+    .login-img3-body img.login-img{ margin-top:100px;}
+    .login-form { max-width: 350px; margin: 20px auto 0; background: #d5d7de;   font-size:13px;  }
+        .login-form a{ color: #688a7e !important; }
+        .login-form h2.login-form-heading { margin: 0; padding:20px 15px; text-align: center; background: #34aadc; border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0; color: #fff; font-size: 18px; text-transform: uppercase; font-weight: 300; font-family: 'Lato', sans-serif; }
+
+        .login-form .group-remember-me-forgot-my-password span{padding-top:2px;padding-left:3px; display: block;  float: right; color: #fff; }
+        .login-form  .link-forgot-my-password{padding-top:2px; display: block;}
+
+        .login-form .checkbox { margin-bottom: 14px; font-weight: normal; font-weight: 300; font-family: 'Lato', sans-serif; padding-left:20px; }
+        .login-form .form-control { position: relative; font-size: 16px; height: auto; padding: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+        .login-form .form-control:focus { z-index: 2; }
+        .login-img{ font-size: 50px; font-weight: 300; padding: 0 0 25px 0; }
+        .login-form .input-group{ padding-bottom: 15px; }
+        .login-form .input-group-addon{ padding: 6px 12px; font-size: 16px; color: #8b9199; font-weight: normal; line-height: 1; text-align: center; background-color: #ffffff; border: none; border-radius: 0; }
+        .login-form input[type="text"], .login-form input[type="password"] {     border: none; box-shadow: none; font-size: 16px; border-radius: 0;  }
+        .login-form .btn{ border-radius: 0; color: #654408; background-color: #F5B033;  }
+        .login-form .btn-login { background: #f67a6e; color: #fff; text-transform: uppercase; font-weight: 300; font-family: 'Lato', sans-serif; box-shadow: 0 4px #e56b60; margin-bottom: 20px;  }
+
+        .login-form p { text-align: center; color: #b6b6b6; font-weight: 300; font-size: 16px;  }
+        .login-form a { color: #b6b6b6; }
+        .login-form a:hover { color: #34aadc; }
+
+    .login-img3-body .login-form p,.login-img2-body .login-form p { color: #34aadc; }
+    .form .required{ font-size: 16px; color: #00a0df; }
+
+    .login-wrap { padding: 20px; }
+        .login-wrap h2{margin-top: 10px; margin-bottom: 20px; color: #fff; }
+
+    .login-social-link  { display: inline-block; margin-top: 20px; margin-bottom: 15px; }
+
+    .login-social-link a { color: #fff; padding: 15px 28px; border-radius: 4px; }
+        .login-social-link a:hover { color: #fff; }
+        .login-social-link a i {   font-size: 20px; padding-right: 10px;   }
+        .login-social-link a.facebook { background: #5193ea; margin-right: 22px; box-shadow: 0 4px #2775e2; float:left;  }
+        .login-social-link a.twitter { background: #44ccfe; box-shadow: 0 4px #2bb4e8; float:left;  }
+
+
+/**Geral*/
+
+    #carregando{width: 100%; height: 100%; background: rgba(255,255,255,.8); position: fixed; left:0; top: 0; bottom: 0; display: none; z-index: 999999; }
+    #carregando img{position: absolute; display: block; left:50%; top:50%; margin-left: -100px; margin-top: -100px; width: 200px; height: 200px;}
+    #carregando h1{ color: #000;}
+
+    .alert {color: #FFF !important; font-size: 17px !important; position:relative !important;}
+    .alert-success{background: #498E00 !important;}
+    .alert-danger{background: #D70000 !important;}
+    span.fechar{position:absolute; top: 5px; right:10px; cursor:pointer;}
+
+    .navbar #logo{ float: left; padding: 5px 0; display: block;}
+        .navbar #logo img {  height:40px;}
+    .navbar h1 { float: left; margin-top:20px; font-size: 26px;}
+    .error{ color:#A94442; font-size: 12px;}
+    div#anexo{margin-top:20px; padding: 10px 20px; border-top: 1px dashed #ddd;  font-size: 11px;}
+
+    ul#lista-anexos{ padding: 15px 0 0 15px; color: #333;}
+        ul#lista-anexos li { margin-top:5px;  float: left; list-style: none;}
+            ul#lista-anexos li a:hover{ text-decoration: none; }
+
+    #remetente {
+        margin-top: -15px;
+        padding: 0;
+        border-bottom: 1px solid #cccccc;
+    }
+    #remetente [class*="col-"]{
+        padding: 0;
+        background-color: #ffffff;
+    }
+    #remetente > [class*="col-"] strong {
+        background-color: #777777;
+        color: #ffffff;
+        border: 1px solid #777777;
+    }
+    #remetente > [class*="col-"] input[disabled="1"] {
+        border: 0;
+        background-color: #ffffff;
+    }
+    #remetente > [class*="col-"] * {
+        padding: 10px 15px;
+        height: inherit;
+    }
+
+
+/**Abrir um ticket*/
+
+    #cadastro_ticket .panel{ background-color: #FFF;}
+    #buttons-cadastro { padding-bottom:30px; padding-bottom:30px; padding-right:15px; }
+    #buttons-interacao { padding-top:30px; padding-right:15px; }
+
+
+/**/
+
+/**Listagem dos chamados*/
+
+    header .navbar a#link-logo{display: block; height: auto; }
+    /*.panel-body tbody tr{cursor:pointer;}*/
+    .panel-body tbody tr .titulo .glyphicon {color: #B62222 ;}
+    .panel-info>.panel-heading {background-color: #5cb85c; color: #FFF;}
+    #button-abrir-ticket{ margin: 0 0 15px 0;}
+    #filtros_lista{ float: right;}
+    #search_ticket{margin-top: -3px; margin-bottom: 0;}
+    #lista-chamado{
+        border:1px solid #ddd;
+        border-bottom:4px solid #ddd;
+        b-webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        border-collapse: initial;
+    }
+        #lista-chamado thead{ background-color: #CCC; }
+        #lista-chamado_filter, #lista-atendimentos_filter{display: none;}
+
+/** Interação do chamado */
+    #status_aprovacao {border:2px solid #ccc; margin-bottom: 15px; border-top-left-radius: 3px;   border-top-right-radius: 3px;}
+        #status_aprovacao legend{ border-bottom:none; width: auto;}
+    #lista_atendimento .atendente,#lista_atendimento .atendente-invisivel,#lista_atendimento .cliente{height: 50px;}
+    .panel .panel-heading.atendente{ background-color:#4285f4; }
+    .panel .panel-heading.atendente-invisivel{ background-color:#FFF; color:#000; opacity: 0.4;}
+    #lista_atendimento .botao-resposta{cursor: pointer;}
+        #lista_atendimento .panel-info .panel-body{display: none;}
+        #lista_atendimento .panel-heading .data{float: right; font-size: 14px; padding:5px 0;}
+        #lista_atendimento .panel-heading .usuario{float:left; height: 50px; }
+            #lista_atendimento .panel-heading .usuario .glyphicon{ height: 50px;}
+            #lista_atendimento .panel-heading .usuario .nome{ font-size:16px;}
+            #lista_atendimento .panel-heading .usuario .tipo{ font-size:12px;}
+    .informacoes{ border-bottom: 1px solid #CCC;  font-size:12px; margin-bottom:15px; padding-bottom:5px;}
+    #aprovar_orcamento{background-color: #65b045; color: #FFF; padding:5px;}
+        #aprovar_orcamento:hover{background-color:#55a035; text-decoration: none;}
+
+    button#fechar{/*font-size: 11px;*/}
+
+
+    /*classes dos botões de prioridade*/
+    @media (min-width: 992px) {
+        .btn-situacao{ width: 165px; }
+    }
+
+    @media (max-width: 992px) {
+        .btn-situacao{ width: 100px; }
+    }
+
+/** Relatório */
+
+    ul#meses{ }
+        ul#meses li{ width:155px; float:left; text-align: center;}
+    .novo{ background:#008000; color:#fff;}
+    .novo-cliente{ color:#008000; background:none; border:2px solid #008000;}
+    .em-atendimento{ background:#FF4600; color:#FFF;}
+    .em-atendimento-cliente{ color:#FF4600; background:none; border:2px solid #FF7F00;}
+    .respondido{ color:#dd4b39; background:none; border:2px solid #dd4b39;}
+    .respondido-cliente{background:#dd4b39; color:#FFF; }
+    .aguardando-resposta{ color:#0000aa; background:none; border:2px solid #0000aa;}
+    .aguardando-resposta-cliente{ background-color: #0000aa; color: #FFF;}
+    .parado{ color:#8B4513; background:none; border: 1px solid #8B4513; }
+    .parado-cliente{ background-color: #8B4513; color:#FFF;}
+    .aguardando_aprovacao{ color:#4B0082; background:none; border: 2px solid #4B0082; }
+    .aguardando_aprovacao-cliente{ background-color: #4B0082; color:#FFF;}
+    .aprovado{ background:#FF4600; color:#FFF; }
+    .aprovado-cliente{ color:#FF4600; background:none; border:2px solid #FF7F00;}
+    .em-desenvolvimento{ background:#FF4600; color:#FFF; }
+    .em-desenvolvimento-cliente{ color:#FF4600; background:none; border:2px solid #FF7F00;}
+
+    .fechado{}
+    .tarefa-entregue{}
+
+.credenciais { float:left;  width: 70% !important; }
+
+table tr.nao_clica{cursor: auto;}
